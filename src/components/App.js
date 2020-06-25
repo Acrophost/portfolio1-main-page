@@ -6,14 +6,16 @@ import Nav from "./Nav";
 const App = () => {
   return (
     <div>
-      <Nav />
-      <div className="title-container">
-        <h1>
-          Hello, I'm Ania
-          <br />a front-end
-          <br />
-          developer
-        </h1>
+      <div className="top-container">
+        <Nav />
+        <div className="title-container">
+          <h1>
+            Hello, I'm Ania
+            <br />a front-end
+            <br />
+            developer
+          </h1>
+        </div>
       </div>
     </div>
   );

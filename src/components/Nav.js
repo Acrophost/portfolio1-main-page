@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@reach/router";
-import PersonalLogo from "../svgs/logo.svg";
+import PersonalLogo from "../images/logo.svg";
 
 const Nav = () => {
   return (
