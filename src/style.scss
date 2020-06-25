@@ -1,0 +1,64 @@
+$base-color: hsl(69, 52%, 68%);
+$secondary-color: hsl(36, 100%, 8%);
+$tertiary-color: hsl(22, 89%, 62%);
+$fancy-font: "Noto Serif", serif;
+$regular-font: "Barlow", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Noto+Serif:wght@700&display=swap");
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $base-color;
+  color: $secondary-color;
+  font-family: $regular-font;
+}
+
+header {
+  display: grid;
+  grid-template-rows: 1fr 8fr 1fr;
+  font-family: $fancy-font;
+}
+
+ul {
+  grid-column: 3/4;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $tertiary-color;
+  text-decoration: none;
+  li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.logo-module {
+  grid-column: 1/2;
+}
+
+.nav-active {
+  color: $base-color;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: $fancy-font;
+  font-size: 4.5rem;
+  text-align: right;
+}
