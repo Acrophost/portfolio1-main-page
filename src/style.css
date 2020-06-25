@@ -13,12 +13,16 @@ body {
 
 header {
   display: grid;
-  grid-template-rows: 1fr 8fr 1fr;
+  grid-template-columns: 1fr 5fr 3fr;
   font-family: "Noto Serif", serif;
+  width: 100%;
+  padding: 1rem;
+  top: 0;
+  position: fixed;
 }
 
 ul {
-  grid-column: 3/4;
+  grid-area: 1/3/2/4;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -38,7 +42,9 @@ a li {
 }
 
 .logo-module {
-  grid-column: 1/2;
+  grid-area: 1/1/2/2;
+  display: flex;
+  align-items: center;
 }
 
 .nav-active {
@@ -48,7 +54,7 @@ a li {
 .title-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  margin-top: 25vh;
 }
 
 h1 {

@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = ({ mode }) => {
   return {
@@ -27,6 +28,10 @@ module.exports = ({ mode }) => {
         {
           test: /\.s(a|c)ss$/,
           use: ["style-loader", "css-loader", "sass-loader"],
+        },
+        {
+          test: /\.svg$/,
+          use: ["@svgr/webpack"],
         },
       ],
     },
