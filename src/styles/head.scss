@@ -1,0 +1,40 @@
+@import "./variables";
+
+.top-container {
+  clip-path: polygon(100% 0%, 100% 70%, 50% 90%, 50% 90%, 0 70%, 0 0);
+  width: 100%;
+  min-height: 130vh;
+  background-image: linear-gradient(
+      to left,
+      $secondary-color 50%,
+      hsla(0, 0, 0, 0) 50%
+    ),
+    url("/../src/images/poppy.jpg");
+  background-position: 80% 55%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  position: absolute;
+  top: 0;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 25vh;
+}
+
+h1 {
+  font-family: $fancy-font;
+  font-size: 4.5rem;
+  text-align: right;
+  margin-right: 1.5em;
+  background: linear-gradient(
+    to right,
+    $secondary-color 60%,
+    $tertiary-color 60%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,0 +1,17 @@
+@import "./variables";
+@import "./head";
+@import "./nav";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $base-color;
+  color: $secondary-color;
+  font-family: $regular-font;
+  padding: 0;
+  margin: 0;
+}
