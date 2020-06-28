@@ -1,0 +1,52 @@
+@import "./variables";
+
+.project-container {
+  margin-top: 120vh;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  h2 {
+    flex: 95%;
+    text-align: center;
+    margin: 2.5%;
+    font-size: 5rem;
+    font-family: $fancy-font;
+  }
+}
+
+.desktop-img {
+  flex: 60%;
+  min-height: 30vw;
+  background-color: pink;
+  margin-right: 5%;
+}
+
+.mobile-img {
+  flex: 25%;
+  min-height: 30vw;
+  background-color: pink;
+}
+
+.arrow-right,
+.arrow-left {
+  font-size: 40px;
+  background: none;
+  border: none;
+  flex: 5%;
+  font-family: $fancy-font;
+}
+
+.view-button {
+  border-radius: none;
+  border-color: $secondary-color;
+  background-color: inherit;
+  flex: 20%;
+  margin: 5rem 10rem;
+  font-size: 2.5rem;
+
+  &:second-child {
+    background-color: $tertiary-color;
+  }
+}

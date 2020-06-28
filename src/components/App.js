@@ -2,6 +2,34 @@ import React from "react";
 import { render } from "react-dom";
 import "../styles/style.scss";
 import Nav from "./Nav";
+import Project from "./Project";
+
+const projects = [
+  {
+    src: "xyz",
+    alt: "xyz",
+    srcMobile: "xyz",
+    altMobile: "mobile xyz",
+    codeUrl: "/#",
+    liveUrl: "/#",
+  },
+  {
+    src: "abc",
+    alt: "abc",
+    srcMobile: "abc",
+    altMobile: "mobile abc",
+    codeUrl: "/#",
+    liveUrl: "/#",
+  },
+  {
+    src: "abc",
+    alt: "abc",
+    srcMobile: "abc",
+    altMobile: "mobile abc",
+    codeUrl: "/#",
+    liveUrl: "/#",
+  },
+];
 
 const App = () => {
   return (
@@ -17,6 +45,7 @@ const App = () => {
           </h1>
         </div>
       </div>
+      <Project projects={projects} />
     </div>
   );
 };
