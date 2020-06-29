@@ -43,6 +43,10 @@ const App = () => {
             <br />
             developer
           </h1>
+          <div className="page-explore">
+            Scroll down to explore! <br />
+            <i className="material-icons md">keyboard_arrow_down</i>
+          </div>
         </div>
       </div>
       <Project projects={projects} />
