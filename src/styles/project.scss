@@ -1,11 +1,13 @@
 @import "./variables";
 
 .project-container {
+  position: relative;
   margin-top: 120vh;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
+  z-index: 3;
 
   h2 {
     flex: 95%;
@@ -16,17 +18,25 @@
   }
 }
 
+.images-container {
+  display: flex;
+  flex: 85%;
+  z-index: inherit;
+}
+
 .desktop-img {
   flex: 60%;
   min-height: 32vw;
   background-color: pink;
   margin-right: 5%;
+  z-index: inherit;
 }
 
 .mobile-img {
   flex: 25%;
   min-height: 32vw;
   background-color: pink;
+  z-index: inherit;
 }
 
 .arrow-right,
@@ -38,10 +48,15 @@
   font-family: $fancy-font;
   outline: none;
   transition: linear color 0.6s;
+  z-index: inherit;
 
   &:hover {
     color: $tertiary-color;
   }
+}
+
+.arrow-right {
+  color: $base-color;
 }
 
 .view-button {
@@ -50,14 +65,28 @@
   color: $tertiary-color;
   background-color: inherit;
   flex: 20%;
-  margin: 5rem 10rem;
+  margin: 5rem;
   font-size: 2.5rem;
   outline: none;
   transition: linear background-color 0.3s;
   transition: linear color 0.6s;
+  z-index: inherit;
 
   &:hover {
     background-color: $tertiary-color;
     color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.triangle-a {
+  position: absolute;
+  top: 9rem;
+  right: 0;
+  width: 35rem;
+  z-index: 1;
+
+  & > path {
+    fill: $secondary-color;
+    stroke: $secondary-color;
   }
 }

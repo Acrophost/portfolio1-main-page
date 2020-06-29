@@ -1,5 +1,6 @@
 import React from "react";
 import { navigate } from "@reach/router";
+import TriangleA from "../images/TriangleA.svg";
 
 class Project extends React.Component {
   constructor() {
@@ -52,12 +53,14 @@ class Project extends React.Component {
         <button className="arrow-left" onclick={this.handleLeftClick}>
           {"<"}
         </button>
-        <img src={project.src} alt={project.alt} className="desktop-img" />
-        <img
-          src={project.srcMobile}
-          alt={project.altMobile}
-          className="mobile-img"
-        />
+        <div className="images-container">
+          <img src={project.src} alt={project.alt} className="desktop-img" />
+          <img
+            src={project.srcMobile}
+            alt={project.altMobile}
+            className="mobile-img"
+          />
+        </div>
         <button className="arrow-right" onclick={this.handleRightClick}>
           {">"}
         </button>
@@ -67,6 +70,7 @@ class Project extends React.Component {
         <button className="view-button" onClick={this.handleCheckCode}>
           Code
         </button>
+        <TriangleA className="triangle-a" />
       </div>
     );
   }

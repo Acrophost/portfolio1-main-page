@@ -37,14 +37,9 @@ const App = () => {
       <div className="top-container">
         <Nav />
         <div className="title-container">
-          <h1>
-            Hello, I'm Ania
-            <br />a front-end
-            <br />
-            developer
-          </h1>
+          <h1>Hello, I'm Ania a front-end developer.</h1>
           <div className="page-explore">
-            Scroll down to explore! <br />
+            <p>Scroll down to explore!</p>
             <i className="material-icons md">keyboard_arrow_down</i>
           </div>
         </div>
