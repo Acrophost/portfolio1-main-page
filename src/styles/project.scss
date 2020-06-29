@@ -18,14 +18,14 @@
 
 .desktop-img {
   flex: 60%;
-  min-height: 30vw;
+  min-height: 32vw;
   background-color: pink;
   margin-right: 5%;
 }
 
 .mobile-img {
   flex: 25%;
-  min-height: 30vw;
+  min-height: 32vw;
   background-color: pink;
 }
 
@@ -36,17 +36,28 @@
   border: none;
   flex: 5%;
   font-family: $fancy-font;
+  outline: none;
+  transition: linear color 0.6s;
+
+  &:hover {
+    color: $tertiary-color;
+  }
 }
 
 .view-button {
-  border-radius: none;
-  border-color: $secondary-color;
+  border-radius: 10px;
+  border: $tertiary-color solid;
+  color: $tertiary-color;
   background-color: inherit;
   flex: 20%;
   margin: 5rem 10rem;
   font-size: 2.5rem;
+  outline: none;
+  transition: linear background-color 0.3s;
+  transition: linear color 0.6s;
 
-  &:second-child {
+  &:hover {
     background-color: $tertiary-color;
+    color: rgba(255, 255, 255, 0.5);
   }
 }
