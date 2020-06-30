@@ -34,8 +34,8 @@ const projects = [
 const App = () => {
   return (
     <div>
-      <div className="top-container">
-        <Nav />
+      <Nav />
+      <div className="head-module">
         <div className="title-container">
           <h1>Hello, I'm Ania a front-end developer.</h1>
           <div className="page-explore">

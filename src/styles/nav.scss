@@ -10,6 +10,7 @@ header {
   padding: 1rem;
   top: 0;
   position: fixed;
+  z-index: 4;
 }
 
 ul {
@@ -26,8 +27,13 @@ a {
   text-decoration: none;
   li {
     list-style-type: none;
-    padding: 0;
+    padding: 0 0.5rem;
     margin: 0;
+    transition: border 2s;
+
+    &:hover {
+      border-bottom: 2px solid;
+    }
   }
 }
 

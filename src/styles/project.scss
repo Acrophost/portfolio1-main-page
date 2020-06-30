@@ -1,18 +1,18 @@
 @import "./variables";
 
-.project-container {
+.project-module {
   position: relative;
-  margin-top: 120vh;
+  margin-top: 130vh;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   z-index: 3;
 
   h2 {
-    flex: 95%;
+    width: 100%;
     text-align: center;
-    margin: 2.5%;
+    margin: 2%;
     font-size: 5rem;
     font-family: $fancy-font;
   }
@@ -20,12 +20,13 @@
 
 .images-container {
   display: flex;
-  flex: 85%;
+  width: 85%;
+  justify-content: stretch;
   z-index: inherit;
 }
 
 .desktop-img {
-  flex: 60%;
+  width: 70%;
   min-height: 32vw;
   background-color: pink;
   margin-right: 5%;
@@ -33,7 +34,7 @@
 }
 
 .mobile-img {
-  flex: 25%;
+  width: 30%;
   min-height: 32vw;
   background-color: pink;
   z-index: inherit;
@@ -47,7 +48,7 @@
   flex: 5%;
   font-family: $fancy-font;
   outline: none;
-  transition: linear color 0.6s;
+  transition: linear color 0.4s;
   z-index: inherit;
 
   &:hover {
@@ -59,17 +60,23 @@
   color: $base-color;
 }
 
+.button-container {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  z-index: inherit;
+}
+
 .view-button {
+  flex: 30%;
   border-radius: 10px;
   border: $tertiary-color solid;
   color: $tertiary-color;
   background-color: inherit;
-  flex: 20%;
-  margin: 5rem;
+  margin: 3rem;
   font-size: 2.5rem;
   outline: none;
-  transition: linear background-color 0.3s;
-  transition: linear color 0.6s;
+  transition: background-color 0.5s, color 0.6s;
   z-index: inherit;
 
   &:hover {
@@ -80,9 +87,9 @@
 
 .triangle-a {
   position: absolute;
-  top: 9rem;
+  top: 4vw;
   right: 0;
-  width: 35rem;
+  width: 35vw;
   z-index: 1;
 
   & > path {

@@ -48,7 +48,7 @@ class Project extends React.Component {
     };
 
     return (
-      <div className="project-container">
+      <div className="project-module">
         <h2>Projects</h2>
         <button className="arrow-left" onclick={this.handleLeftClick}>
           {"<"}
@@ -64,12 +64,14 @@ class Project extends React.Component {
         <button className="arrow-right" onclick={this.handleRightClick}>
           {">"}
         </button>
-        <button className="view-button" onClick={this.handleCheckLive}>
-          Live version
-        </button>
-        <button className="view-button" onClick={this.handleCheckCode}>
-          Code
-        </button>
+        <div className="button-container">
+          <button className="view-button" onClick={this.handleCheckLive}>
+            Live version
+          </button>
+          <button className="view-button" onClick={this.handleCheckCode}>
+            Code
+          </button>
+        </div>
         <TriangleA className="triangle-a" />
       </div>
     );
