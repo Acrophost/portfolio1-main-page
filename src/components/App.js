@@ -3,6 +3,8 @@ import { render } from "react-dom";
 import "../styles/style.scss";
 import Nav from "./Nav";
 import Project from "./Project";
+import About from "./About";
+import ArrowStraight from "../images/arrow1.svg";
 
 const projects = [
   {
@@ -40,11 +42,12 @@ const App = () => {
           <h1>Hello, I'm Ania a front-end developer.</h1>
           <div className="page-explore">
             <p>Scroll down to explore!</p>
-            <i className="material-icons md">keyboard_arrow_down</i>
+            <ArrowStraight className="head-arrow" />
           </div>
         </div>
       </div>
       <Project projects={projects} />
+      <About />
     </div>
   );
 };

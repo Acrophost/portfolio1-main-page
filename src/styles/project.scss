@@ -8,14 +8,16 @@
   align-items: center;
   justify-content: center;
   z-index: 3;
+}
 
-  h2 {
-    width: 100%;
-    text-align: center;
-    margin: 2%;
-    font-size: 5rem;
-    font-family: $fancy-font;
-  }
+h2 {
+  width: 100%;
+  text-align: center;
+  margin: 2%;
+  font-size: 5rem;
+  font-family: $fancy-font;
+  z-index: 3;
+  position: relative;
 }
 
 .images-container {
@@ -42,6 +44,7 @@
 
 .arrow-right,
 .arrow-left {
+  position: relative;
   font-size: 40px;
   background: none;
   border: none;
@@ -52,12 +55,30 @@
   z-index: inherit;
 
   &:hover {
-    color: $tertiary-color;
+    .arrow-r > path,
+    .arrow-l > path {
+      stroke: $tertiary-color;
+    }
   }
 }
 
-.arrow-right {
-  color: $base-color;
+.arrow-r,
+.arrow-l {
+  width: 2rem;
+  position: relative;
+  z-index: 2;
+  & > path {
+    fill: none;
+    stroke: $secondary-color;
+    transition: stroke 0.5s;
+  }
+}
+
+.arrow-r {
+  transform: scale(-1, 1);
+  & > path {
+    stroke: $base-color;
+  }
 }
 
 .button-container {
