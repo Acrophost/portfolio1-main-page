@@ -1,1 +1,9 @@
-<svg id="Arrow1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.89 594.15"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:20px;}</style></defs><title>arrow1</title><polyline class="cls-1" points="7.02 524.48 63.55 580.17 120.92 524.48"/><path class="cls-1" d="M307.5,243c-2.5,148,.5,297-.29,444.73" transform="translate(-243.66 -107.58)"/><path class="cls-1" d="M307.75,178.69q-.11,25.53-.2,51.06" transform="translate(-243.66 -107.58)"/><path class="cls-1" d="M307.73,134.77q0,15,0,30" transform="translate(-243.66 -107.58)"/><path class="cls-1" d="M307.75,108.09a125.66,125.66,0,0,1,0,13.86" transform="translate(-243.66 -107.58)"/></svg>
+<svg id="Arrow1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 127.89 594.15">
+  <defs>
+    <style>
+      .cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:20px}
+    </style>
+  </defs>
+  <path class="cls-1" d="M7.02 524.48l56.53 55.69 57.37-55.69"/>
+  <path class="cls-1" d="M307.5 243c-2.5 148 .5 297-.29 444.73M307.75 178.69q-.11 25.53-.2 51.06M307.73 134.77v30M307.75 108.09a125.66 125.66 0 010 13.86" transform="translate(-243.66 -107.58)"/>
+</svg>

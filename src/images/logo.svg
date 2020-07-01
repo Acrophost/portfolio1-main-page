@@ -1,1 +1,10 @@
-<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="3rem" viewBox="0 0 567.3 567.3"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:10px;}.cls-2{fill:#231f20;}</style></defs><title>logo</title><rect class="cls-1" x="90.56" y="261.03" width="391.14" height="391.14" transform="translate(404.19 -241.54) rotate(45)"/><path class="cls-2" d="M368.16,436.31h29v24.47H353.52L284.94,292.5,212.25,460.78H169.5V436.31h28.22l87.22-202.5Z" transform="translate(-2.48 -172.95)"/><path class="cls-2" d="M333.84,435.94c1.9,59.27-63,50.44-63,50.44V602.53h23.91v21.1H225.56v-21.1h24.19V396.19S332.16,383.25,333.84,435.94Zm-63-18.94v48.19s43.48,6.51,41.51-28.5C310.91,411.12,270.84,417,270.84,417Z" transform="translate(-2.48 -172.95)"/></svg>
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" width="3rem" viewBox="0 0 567.3 567.3">
+  <defs>
+    <style>
+      .cls-2{fill:#231f20}
+    </style>
+  </defs>
+  <path fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10" d="M283.6495 7.0717l276.5778 276.5777-276.5778 276.5778L7.0718 283.6494z"/>
+  <path class="cls-2" d="M368.16 436.31h29v24.47h-43.64L284.94 292.5l-72.69 168.28H169.5v-24.47h28.22l87.22-202.5z" transform="translate(-2.48 -172.95)"/>
+  <path class="cls-2" d="M333.84 435.94c1.9 59.27-63 50.44-63 50.44v116.15h23.91v21.1h-69.19v-21.1h24.19V396.19s82.41-12.94 84.09 39.75zm-63-18.94v48.19s43.48 6.51 41.51-28.5c-1.44-25.57-41.51-19.69-41.51-19.69z" transform="translate(-2.48 -172.95)"/>
+</svg>

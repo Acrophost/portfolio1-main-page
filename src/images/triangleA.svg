@@ -1,1 +1,3 @@
-<svg id="TriangleA" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.28 641.21"><defs><style>.cls-1{fill:#231f20;stroke:#231f20;stroke-miterlimit:10;}</style></defs><title>triangleA</title><path class="cls-1" d="M574,95V734L203,537Z" transform="translate(-202.22 -93.63)"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 372.28 641.21">
+  <path d="M371.78 1.37v639l-371-197z" fill="#231f20" stroke="#231f20" stroke-miterlimit="10"/>
+</svg>
