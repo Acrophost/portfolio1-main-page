@@ -1,20 +1,35 @@
 .about-module {
-  margin-top: 40vh;
-  padding-top: 20vh;
+  padding: 10rem 0 13rem 0;
   position: relative;
   color: $base-color;
+  background-color: $secondary-color;
+  clip-path: polygon(0 0%, 100% 12%, 100% 94%, 0 100%);
+  width: 100%;
 
   p {
     position: relative;
   }
 }
 
-.background-poly {
-  top: 0;
-  position: absolute;
+.about-content {
+  display: flex;
+  position: relative;
+  margin-left: 40rem;
+  font-size: 1.5rem;
+}
 
-  & > path {
-    fill: $secondary-color;
-    stroke: $secondary-color;
-  }
+.about-img {
+  position: absolute;
+  top: 10rem;
+  width: 50rem;
+  clip-path: polygon(0 0, 0% 100%, 70% 51%);
+}
+
+.about-info {
+}
+
+.about-technology__known {
+}
+
+.about-technology__learning {
 }

@@ -1,8 +1,4 @@
 @import "./variables";
-@import "./head";
-@import "./nav";
-@import "./project";
-@import "./about";
 
 *,
 *:before,
@@ -17,3 +13,8 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@import "./home";
+@import "./nav";
+@import "./project";
+@import "./about";

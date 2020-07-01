@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { render } from "react-dom";
+import { Router, Location } from "@reach/router";
+
 import "../styles/style.scss";
 import Nav from "./Nav";
+import Home from "./Home";
 import Project from "./Project";
 import About from "./About";
-import ArrowStraight from "../images/arrow1.svg";
+import Contact from "./Contact";
 
 const projects = [
   {
@@ -34,20 +37,17 @@ const projects = [
 ];
 
 const App = () => {
+  const [location, setLocation] = useState("/");
+
   return (
     <div>
-      <Nav />
-      <div className="head-module">
-        <div className="title-container">
-          <h1>Hello, I'm Ania a front-end developer.</h1>
-          <div className="page-explore">
-            <p>Scroll down to explore!</p>
-            <ArrowStraight className="head-arrow" />
-          </div>
-        </div>
-      </div>
-      <Project projects={projects} />
-      <About />
+      <Nav location={location} setLocation={setLocation} />
+      <Router>
+        <Home default path="/" />
+        <Project projects={projects} path="projects" />
+        <About path="about" />
+        <Contact path="contact" />
+      </Router>
     </div>
   );
 };

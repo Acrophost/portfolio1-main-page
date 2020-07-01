@@ -7,10 +7,26 @@ header {
   font-size: 1.2rem;
   letter-spacing: 0.25rem;
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 0 0.4rem 0;
   top: 0;
   position: fixed;
   z-index: 4;
+}
+
+.detached {
+  background-color: $secondary-color;
+  -webkit-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+  box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+
+  & > .logo-module {
+    color: $base-color;
+
+    & > svg {
+      stroke: $base-color;
+      fill: $base-color;
+    }
+  }
 }
 
 ul {
@@ -18,7 +34,7 @@ ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  padding: 0;
+  padding: 0.6rem 0 0 0;
   margin: 0;
 }
 
@@ -41,6 +57,7 @@ a {
   grid-area: 1/1/2/2;
   display: flex;
   align-items: center;
+  margin-left: 1rem;
 }
 
 .nav-active {
