@@ -18,14 +18,14 @@ header {
   -webkit-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
   -moz-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
   box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+}
 
-  & > .logo-module {
-    color: $base-color;
+.logo {
+  position: relative;
+  width: 3rem;
 
-    & > svg {
-      stroke: $base-color;
-      fill: $base-color;
-    }
+  & > path {
+    stroke: $tertiary-color;
   }
 }
 
@@ -58,6 +58,7 @@ a {
   display: flex;
   align-items: center;
   margin-left: 1rem;
+  color: $tertiary-color;
 }
 
 .nav-active {

@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="3rem" viewBox="0 0 567.3 567.3">
-  <path fill="none" stroke="#231f20" stroke-miterlimit="10" stroke-width="10" d="M283.6495 7.0717l276.5778 276.5777-276.5778 276.5778L7.0718 283.6494z"/>
-  <path class="cls-2" d="M365.68 263.36h29v24.47h-43.64l-68.58-168.28-72.69 168.28h-42.75v-24.47h28.22l87.22-202.5z"/>
-  <path class="cls-2" d="M331.36 262.99c1.9 59.27-63 50.44-63 50.44v116.15h23.91v21.1h-69.19v-21.1h24.19V223.24s82.41-12.94 84.09 39.75zm-63-18.94v48.19s43.48 6.51 41.51-28.5c-1.44-25.57-41.51-19.69-41.51-19.69z"/>
-</svg>
+<svg id="Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 581.45 581.45"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-miterlimit:10;stroke-width:20px;}</style></defs><title>logo</title><path class="cls-1" d="M295,733.18,18.39,456.6,295,180,571.56,456.6Z" transform="translate(-4.25 -165.88)"/><polyline class="cls-1" points="178.19 282.15 210.25 282.15 287.9 94.84 368.03 282.15 396.72 282.15"/><path class="cls-1" d="M269.34,611.72V400.78c28.69-.06,61.6,11.35,61.6,40.26-1.31,36.12-18.47,46.33-61.6,47.36" transform="translate(-4.25 -165.88)"/><line class="cls-1" x1="233.4" y1="445.84" x2="295.89" y2="445.84"/></svg>

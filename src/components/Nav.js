@@ -7,7 +7,7 @@ const Nav = (props) => {
     <header className={props.location == "/" ? "" : "detached"}>
       <div className="logo-module">
         ANNA
-        <PersonalLogo />
+        <PersonalLogo className="logo" />
         PIASECKA
       </div>
       <ul>
