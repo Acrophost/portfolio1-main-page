@@ -4,11 +4,13 @@ const About = () => {
   return (
     <div className="about-module">
       <h2>About</h2>
-      <img
-        src="../../src/images/mahface.jpg"
-        alt="Anna's face"
-        className="about-img"
-      />
+      <div className="about-img">
+        <img
+          src="../../src/images/mahface.jpg"
+          alt="Anna's face"
+          className="its-me"
+        />
+      </div>
       <div className="about-content">
         <div className="about-info">
           <p>I'm a 24 year old junior developer from Warsaw, Poland.</p>
@@ -17,10 +19,20 @@ const About = () => {
             If you have any interesting projects or opportunities, please let me
             know! :)
           </p>
-          <p>Currently known technologies:</p>
-          <div className="about-technology__known"></div>
-          <p>Learning:</p>
-          <div className="about-technology__learning"></div>
+          <div className="about-technology">
+            <p>I work with the use of:</p>
+            <ul>
+              <li>HTML</li>
+              <li>CSS (SCSS)</li>
+              <li>JS</li>
+              <li>React</li>
+              <li>Webpack</li>
+              <li>Node.js</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>RWD</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

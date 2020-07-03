@@ -1,5 +1,5 @@
 .about-module {
-  padding: 10rem 0 13rem 0;
+  padding: 4rem 0 7rem 0;
   position: relative;
   color: $base-color;
   background-color: $secondary-color;
@@ -20,16 +20,15 @@
 
 .about-img {
   position: absolute;
-  top: 10rem;
-  width: 50rem;
+  top: 5rem;
+  height: 45rem;
+  width: 45rem;
   clip-path: polygon(0 0, 0% 100%, 70% 51%);
+  overflow: hidden;
 }
 
-.about-info {
-}
-
-.about-technology__known {
-}
-
-.about-technology__learning {
+.its-me {
+  width: 70rem;
+  margin-left: -25rem;
+  margin-top: -3rem;
 }
