@@ -1,0 +1,57 @@
+@import "./variables";
+
+.contact-module {
+  padding: 20vh 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.form-group {
+  margin: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+label {
+  margin-bottom: 0.4rem;
+}
+
+.form-text {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  width: 40rem;
+
+  &:focus {
+    outline-color: $tertiary-color;
+  }
+}
+
+.form-message {
+  height: 20rem;
+  width: 40rem;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+
+  &:focus {
+    outline-color: $tertiary-color;
+  }
+}
+
+.form-button {
+  background-color: inherit;
+  border: $tertiary-color solid;
+  color: $tertiary-color;
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 2.5rem;
+  outline: none;
+  transition: background-color 0.5s, color 0.6s;
+
+  &:hover {
+    background-color: $tertiary-color;
+    color: rgba(255, 255, 255, 0.5);
+  }
+}
