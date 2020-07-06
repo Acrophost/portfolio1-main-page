@@ -2,12 +2,18 @@ import React from "react";
 import { navigate } from "@reach/router";
 import ArrowSmall from "../images/arrow2.svg";
 
+const ProjectElement = React.forwardRef((props, ref) => (
+  <div className="project-module" ref={ref} {...props}></div>
+));
+
 class Project extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       current: 0,
     };
+
+    this.props.refs.projects = React.createRef();
 
     this.handleCheckCode = this.handleCheckCode.bind(this);
     this.handleCheckLive = this.handleCheckLive.bind(this);
@@ -48,7 +54,7 @@ class Project extends React.Component {
     };
 
     return (
-      <div className="project-module">
+      <ProjectElement ref={this.props.refs.projects}>
         <div className="triangle-a"></div>
         <h2>Projects</h2>
         <button className="arrow-left" onClick={this.handleLeftClick}>
@@ -73,7 +79,7 @@ class Project extends React.Component {
             Code
           </button>
         </div>
-      </div>
+      </ProjectElement>
     );
   }
 }

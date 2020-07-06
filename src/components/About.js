@@ -1,8 +1,14 @@
 import React from "react";
 
-const About = () => {
+const AboutElement = React.forwardRef((props, ref) => (
+  <div className="about-module" ref={ref} {...props}></div>
+));
+
+const About = (props) => {
+  props.refs.about = React.createRef();
+
   return (
-    <div className="about-module">
+    <AboutElement ref={props.refs.about}>
       <h2>About</h2>
       <div className="about-img">
         <img
@@ -35,7 +41,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AboutElement>
   );
 };
 

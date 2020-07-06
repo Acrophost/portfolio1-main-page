@@ -5,9 +5,15 @@ import GitLogo from "../images/gitlogo.svg";
 import LinkedInLogo from "../images/linlogo.svg";
 import Mail from "../images/mail.svg";
 
-const Home = () => {
+const HomeElement = React.forwardRef((props, ref) => (
+  <div className="home-module" ref={ref} {...props}></div>
+));
+
+const Home = (props) => {
+  props.refs.home = React.createRef();
+
   return (
-    <div className="head-module">
+    <HomeElement ref={props.refs.home}>
       <div className="title-container">
         <h1>Hello, I'm Ania a front-end developer.</h1>
       </div>
@@ -29,7 +35,7 @@ const Home = () => {
         <p>Scroll down to explore!</p>
         <ArrowStraight className="head-arrow" />
       </div>
-    </div>
+    </HomeElement>
   );
 };
 

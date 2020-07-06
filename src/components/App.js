@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { render } from "react-dom";
-import { Router, Location } from "@reach/router";
 
 import "../styles/style.scss";
 import Nav from "./Nav";
@@ -36,18 +35,18 @@ const projects = [
   },
 ];
 
+const refs = [];
+
 const App = () => {
   const [location, setLocation] = useState("/");
 
   return (
     <div>
-      <Nav location={location} setLocation={setLocation} />
-      <Router>
-        <Home default path="/" />
-        <Project projects={projects} path="projects" />
-        <About path="about" />
-        <Contact path="contact" />
-      </Router>
+      <Nav location={location} setLocation={setLocation} refs={refs} />
+      <Home refs={refs} />
+      <Project projects={projects} refs={refs} />
+      <About refs={refs} />
+      <Contact refs={refs} />
     </div>
   );
 };

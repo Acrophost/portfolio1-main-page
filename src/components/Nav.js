@@ -1,58 +1,71 @@
 import React from "react";
-import { Link } from "@reach/router";
 import PersonalLogo from "../images/logo.svg";
 
 const Nav = (props) => {
   return (
-    <header className={props.location == "/" ? "" : "detached"}>
+    <header>
       <div className="logo-module">
         ANNA
         <PersonalLogo className="logo" />
         PIASECKA
       </div>
       <ul>
-        <Link
-          to="/"
+        <a
+          href="/#home"
           onClick={() => {
             props.setLocation("/");
-            console.log(props.location);
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+            props.refs.home.current.focus();
           }}
         >
           <li className={props.location == "/" ? "nav-active" : ""}>HOME</li>
-        </Link>
-        <Link
-          to="/projects"
+        </a>
+        <a
+          href="/#projects"
           onClick={() => {
             props.setLocation("projects");
-            console.log(props.location);
+            props.refs.projects.current.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+            });
+            props.refs.projects.current.focus();
           }}
         >
           <li className={props.location == "projects" ? "nav-active" : ""}>
             PROJECTS
           </li>
-        </Link>
-        <Link
-          to="/about"
+        </a>
+        <a
+          href="/#about"
           onClick={() => {
             props.setLocation("about");
-            console.log(props.location);
+            props.refs.about.current.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+            });
+            props.refs.about.current.focus();
           }}
         >
           <li className={props.location == "about" ? "nav-active" : ""}>
             ABOUT
           </li>
-        </Link>
-        <Link
-          to="/contact"
+        </a>
+        <a
+          href="/#contact"
           onClick={() => {
             props.setLocation("contact");
-            console.log(props.location);
+            console.log(props.refs.contact);
+            props.refs.contact.current.scrollIntoView({
+              behavior: "smooth",
+              block: "nearest",
+            });
+            props.refs.contact.current.focus();
           }}
         >
           <li className={props.location == "contact" ? "nav-active" : ""}>
             CONTACT
           </li>
-        </Link>
+        </a>
       </ul>
     </header>
   );
