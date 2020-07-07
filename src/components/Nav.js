@@ -1,9 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import PersonalLogo from "../images/logo.svg";
 
 const Nav = (props) => {
+  const [headClass, setHeadClass] = useState("");
+
+  const checkDetachment = () => {
+    setHeadClass(
+      window.pageYOffset > props.refs.projects.current.offsetTop - 100
+        ? "detached"
+        : ""
+    );
+  };
+
+  useEffect(() => {
+    window.onscroll = () => {
+      window.addEventListener("scroll", checkDetachment);
+      console.log(headClass);
+    };
+  }, []);
+
   return (
-    <header>
+    <header className={headClass}>
       <div className="logo-module">
         ANNA
         <PersonalLogo className="logo" />

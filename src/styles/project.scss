@@ -30,7 +30,7 @@ h2 {
   position: relative;
   width: 70%;
   min-height: 32vw;
-  background-color: pink;
+  background-color: $placeholder;
   margin-right: 5%;
 }
 
@@ -38,7 +38,7 @@ h2 {
   position: relative;
   width: 30%;
   min-height: 32vw;
-  background-color: pink;
+  background-color: $placeholder;
 }
 
 .arrow-right,
