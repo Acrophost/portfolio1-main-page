@@ -1,7 +1,14 @@
 @import "./variables";
 
 .contact-module {
-  padding: 20vh 0;
+  margin-bottom: 20vh;
+
+  h1 {
+    margin: 2rem 0;
+  }
+}
+
+.contact-form {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
@@ -34,6 +41,7 @@ label {
   width: 40rem;
   padding: 0.5rem;
   font-size: 1.5rem;
+  resize: none;
 
   &:focus {
     outline-color: $tertiary-color;

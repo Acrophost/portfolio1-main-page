@@ -33,7 +33,7 @@ const About = (props) => {
               <li>JS</li>
               <li>React</li>
               <li>Webpack</li>
-              <li>Node.js</li>
+              <li>Npm</li>
               <li>Adobe Photoshop</li>
               <li>Adobe Illustrator</li>
               <li>RWD</li>
