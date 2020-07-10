@@ -1,6 +1,6 @@
 import React from "react";
 import { navigate } from "@reach/router";
-import ArrowSmall from "../images/arrow2.svg";
+import { ReactComponent as ArrowSmall } from "../images/arrow2.svg";
 
 const ProjectElement = React.forwardRef((props, ref) => (
   <div className="project-module" ref={ref} {...props}></div>

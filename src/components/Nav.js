@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import PersonalLogo from "../images/logo.svg";
+import { ReactComponent as PersonalLogo } from "../images/logo.svg";
 
 const Nav = (props) => {
   const [headClass, setHeadClass] = useState("");
@@ -15,7 +15,6 @@ const Nav = (props) => {
   useEffect(() => {
     window.onscroll = () => {
       window.addEventListener("scroll", checkDetachment);
-      console.log(headClass);
     };
   }, []);
 

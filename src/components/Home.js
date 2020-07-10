@@ -1,9 +1,9 @@
 import React from "react";
-import ArrowStraight from "../images/arrow1.svg";
-import FacebookLogo from "../images/fblogo.svg";
-import GitLogo from "../images/gitlogo.svg";
-import LinkedInLogo from "../images/linlogo.svg";
-import Mail from "../images/mail.svg";
+import { ReactComponent as ArrowStraight } from "../images/arrow1.svg";
+import { ReactComponent as FacebookLogo } from "../images/fblogo.svg";
+import { ReactComponent as GitLogo } from "../images/gitlogo.svg";
+import { ReactComponent as LinkedInLogo } from "../images/linlogo.svg";
+import { ReactComponent as Mail } from "../images/mail.svg";
 
 const HomeElement = React.forwardRef((props, ref) => (
   <div className="home-module" ref={ref} {...props}></div>
