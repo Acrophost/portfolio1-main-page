@@ -14,10 +14,10 @@ const Home = (props) => {
 
   return (
     <HomeElement ref={props.refs.home}>
-      <div className="title-container">
+      <div className="home__title-container">
         <h1>Hello, I'm Ania a front-end developer.</h1>
       </div>
-      <div className="icon-container">
+      <div className="home__icon-container">
         <a href="https://www.facebook.com/ania.piasecka.980">
           <FacebookLogo />
         </a>
@@ -31,9 +31,9 @@ const Home = (props) => {
           <Mail />
         </a>
       </div>
-      <div className="page-explore">
+      <div className="home__page-explore">
         <p>Scroll down to explore!</p>
-        <ArrowStraight className="head-arrow" />
+        <ArrowStraight className="home__head-arrow" />
       </div>
     </HomeElement>
   );

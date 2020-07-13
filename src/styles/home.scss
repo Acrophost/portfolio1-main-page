@@ -18,19 +18,19 @@
   flex-flow: row wrap;
 }
 
-.title-container {
+.home__title-container {
   margin: 17vh -5.5rem 0 auto;
   width: 44rem;
   position: relative;
 }
 
-.icon-container {
+.home__icon-container {
   margin-left: auto;
   align-self: center;
   display: flex;
   flex-flow: column nowrap;
 
-  & > a {
+  a {
     border: none;
     background: none;
     outline: none;
@@ -68,7 +68,7 @@ h1 {
   -webkit-text-fill-color: transparent;
 }
 
-.page-explore {
+.home__page-explore {
   position: relative;
   font-size: 1.5rem;
   color: $tertiary-color;
@@ -77,7 +77,7 @@ h1 {
   margin-top: -8rem;
 }
 
-.head-arrow {
+.home__head-arrow {
   width: 1rem;
   & > path {
     stroke: $tertiary-color;
