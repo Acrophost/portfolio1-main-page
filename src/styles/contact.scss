@@ -1,7 +1,6 @@
 @import "./variables";
 
 .contact-module {
-  margin-bottom: 20vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -10,6 +9,7 @@
 
 .contact__content {
   padding: 3rem;
+  padding-bottom: 20vh;
   font-size: 1.5rem;
 }
 

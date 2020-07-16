@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as PersonalLogo } from "../images/logo.svg";
 
 const Nav = (props) => {
-  const [headClass, setHeadClass] = useState("");
+  const [headClass, setHeadClass] = useState("nav-module");
 
   const checkDetachment = () => {
     setHeadClass(
       window.pageYOffset > props.refs.projects.current.offsetTop - 100
-        ? "detached"
-        : ""
+        ? "nav-module detached"
+        : "nav-module"
     );
   };
 
@@ -20,9 +20,9 @@ const Nav = (props) => {
 
   return (
     <header className={headClass}>
-      <div className="logo-module">
+      <div className="nav__logo-module">
         ANNA
-        <PersonalLogo className="logo" />
+        <PersonalLogo className="nav__logo" />
         PIASECKA
       </div>
       <ul>
@@ -34,7 +34,7 @@ const Nav = (props) => {
             props.refs.home.current.focus();
           }}
         >
-          <li className={props.location == "/" ? "nav-active" : ""}>HOME</li>
+          <li className={props.location == "/" ? "nav__active" : ""}>HOME</li>
         </a>
         <a
           href="/#projects"
@@ -47,7 +47,7 @@ const Nav = (props) => {
             props.refs.projects.current.focus();
           }}
         >
-          <li className={props.location == "projects" ? "nav-active" : ""}>
+          <li className={props.location == "projects" ? "nav__active" : ""}>
             PROJECTS
           </li>
         </a>
@@ -62,7 +62,7 @@ const Nav = (props) => {
             props.refs.about.current.focus();
           }}
         >
-          <li className={props.location == "about" ? "nav-active" : ""}>
+          <li className={props.location == "about" ? "nav__active" : ""}>
             ABOUT
           </li>
         </a>
@@ -78,11 +78,14 @@ const Nav = (props) => {
             props.refs.contact.current.focus();
           }}
         >
-          <li className={props.location == "contact" ? "nav-active" : ""}>
+          <li className={props.location == "contact" ? "nav__active" : ""}>
             CONTACT
           </li>
         </a>
       </ul>
+      <button className="nav__menu-button">
+        <div className="nav__hamburger" />
+      </button>
     </header>
   );
 };

@@ -1,22 +1,13 @@
 @import "./variables";
 
 .project-module {
-  margin-top: 130vh;
+  margin-top: 5vh;
   position: relative;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
   padding-top: 1.2rem;
-}
-
-h2 {
-  width: 100%;
-  text-align: center;
-  margin: 2% 0 0.8% 0;
-  font-size: 5rem;
-  font-family: $fancy-font;
-  position: relative;
 }
 
 .images-container {
