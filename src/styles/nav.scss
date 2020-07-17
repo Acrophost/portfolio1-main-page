@@ -74,12 +74,6 @@ a {
 }
 
 @media (max-width: 480px) {
-  .detached {
-    & > .nav__logo-module {
-      display: none;
-    }
-  }
-
   .nav-module {
     background: none;
     ul {
@@ -87,62 +81,92 @@ a {
     }
   }
 
-  .nav__hamburger {
+  .detached {
+    & > .nav__logo-module {
+      display: none;
+    }
+  }
+
+  .nav__hamburger-t,
+  .nav__hamburger-m,
+  .nav__hamburger-b {
     width: 4.5rem;
-    height: 0.6rem;
+    height: 0.5rem;
     content: "";
     background-color: $tertiary-color;
-    border-radius: 2rem;
-    margin: 1.5rem 1rem 0 0;
+    border-radius: 3rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    transition: 1s ease;
+  }
 
-    &::after,
-    &::before {
-      width: 4.5rem;
-      height: 0.5rem;
-      content: "";
-      background-color: $tertiary-color;
-      border-radius: 2rem;
-      right: 4rem;
-      position: absolute;
-    }
+  .nav__hamburger-m,
+  .nav__hamburger-b {
+    position: absolute;
+  }
 
-    &::after {
-      margin-top: 1.5rem;
-    }
+  .nav__hamburger-m {
+    top: 5.5rem;
+  }
 
-    &::before {
-      margin-top: -1.5rem;
+  .nav__hamburger-b {
+    top: 7rem;
+  }
+
+  .nav__menu-button {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    background-color: $secondary-color;
+    position: fixed;
+    top: -3rem;
+    right: -3rem;
+    height: 10rem;
+    border: none;
+    outline: none;
+    border-radius: 10% 0 10% 50%;
+    padding: 4rem 3rem 2.5rem 2.5rem;
+    transition: 1s ease;
+
+    &:active {
+      height: 100vh;
+      border-radius: 0;
+
+      .nav__hamburger-t {
+        transform: rotate(30deg);
+        margin-top: 1rem;
+      }
+
+      .nav__hamburger-m {
+        transform: rotate(90deg);
+        right: 4.8rem;
+        top: 6.05rem;
+      }
+
+      .nav__hamburger-b {
+        transform: rotate(-30deg);
+        right: 2.9rem;
+        top: 7.2rem;
+      }
     }
+  }
+
+  .nav__logo-module {
+    font-size: 2rem;
+  }
+
+  .nav__logo {
+    width: 6rem;
   }
 }
 
-.nav__menu-button {
-  display: block;
-  background-color: $secondary-color;
-  position: fixed;
-  top: -3rem;
-  right: -3rem;
-  border: none;
-  outline: none;
-  border-radius: 10% 0 10% 50%;
-  padding: 4rem 3rem 4rem 3rem;
+@media (max-width: 360px) {
+  .nav__logo-module {
+    font-size: 3rem;
+  }
 
-  &:active {
-    & > .nav__hamburger {
-      transform: rotate(90deg);
-      margin-right: 3rem;
-
-      &::before {
-        transform: rotate(60deg);
-        margin-right: -5.2rem;
-        margin-top: -1.9rem;
-      }
-
-      &::after {
-        transform: rotate(-60deg);
-        margin-top: -1.9rem;
-        margin-right: -3rem;
-      }
-    }
+  .nav__logo {
+    width: 8rem;
   }
 }

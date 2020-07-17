@@ -84,7 +84,9 @@ const Nav = (props) => {
         </a>
       </ul>
       <button className="nav__menu-button">
-        <div className="nav__hamburger" />
+        <div className="nav__hamburger-t"></div>
+        <div className="nav__hamburger-m"></div>
+        <div className="nav__hamburger-b"></div>
       </button>
     </header>
   );

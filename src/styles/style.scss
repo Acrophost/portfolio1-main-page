@@ -26,6 +26,12 @@ h2 {
 
 @media (max-width: 480px) {
   html {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
     font-size: 5px;
   }
 }

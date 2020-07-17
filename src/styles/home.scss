@@ -109,11 +109,26 @@ h1 {
 
   h1 {
     margin: 15rem 0.5rem 0 0.5rem;
-    font-size: 10rem;
+    font-size: 8rem;
     background: none;
     background-clip: none;
     -webkit-background-clip: none;
     -webkit-text-fill-color: $secondary-color;
+  }
+
+  .home__page-explore {
+    margin-top: -22rem;
+    font-size: 3rem;
+  }
+
+  .home__head-arrow {
+    width: 2rem;
+  }
+}
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 10rem;
   }
 
   .home__page-explore {
@@ -122,6 +137,6 @@ h1 {
   }
 
   .home__head-arrow {
-    width: 2.5rem;
+    width: 2rem;
   }
 }
