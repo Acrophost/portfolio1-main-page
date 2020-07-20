@@ -1,86 +1,138 @@
+.home__head-arrow {
+  & > path {
+    stroke: $tertiary-color;
+  }
+}
+
 .home-module {
-  clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
   width: 100%;
-  height: 120vh;
-  background: linear-gradient(
-      to left,
-      $secondary-color 50%,
-      hsla(0, 0, 0, 0) 50%
-    ),
-    url("/../src/images/poppy.svg");
-  background-position: 80% 65%;
-  background-repeat: no-repeat;
   margin: 0;
   position: relative;
-  top: 0;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
 }
 
-.home__title-container {
-  margin: 17vh -5.5rem 0 auto;
-  width: 44rem;
-  position: relative;
-}
-
-.home__icon-container {
-  margin-left: auto;
-  align-self: center;
-  display: flex;
-  flex-flow: column nowrap;
-
-  a {
-    border: none;
-    background: none;
-    outline: none;
-    position: relative;
-    width: 3.5rem;
-    margin: 0.8rem;
-
-    &:hover {
-      border: none;
-    }
-
-    & > svg {
-      & > path {
-        stroke: $base-color;
-      }
-      &:hover > path {
-        stroke: $tertiary-color;
-      }
-    }
-  }
-}
-
 h1 {
   font-family: $fancy-font;
-  font-size: 4.5rem;
   text-align: right;
-  margin-right: 1.5em;
-  background: linear-gradient(
-    to right,
-    $secondary-color 58.6%,
-    $tertiary-color 58.6%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+
+.home__title-container {
+  position: relative;
 }
 
 .home__page-explore {
   position: relative;
-  font-size: 1.5rem;
   color: $tertiary-color;
   flex: 100%;
   text-align: center;
-  margin-top: -8rem;
 }
 
-.home__head-arrow {
-  width: 1rem;
-  & > path {
-    stroke: $tertiary-color;
+@media (min-width: 480px) {
+  .home-module {
+    clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
+    height: 70rem;
+    background: linear-gradient(
+        to left,
+        $secondary-color 50%,
+        hsla(0, 0, 0, 0) 50%
+      ),
+      url("/../src/images/poppy.svg");
+    background-position: 80% 65%;
+    background-repeat: no-repeat;
+  }
+
+  .home__title-container {
+    margin: 17vh -5.5rem 0 auto;
+    width: 44rem;
+  }
+
+  .home__icon-container {
+    margin-left: auto;
+    align-self: center;
+    display: flex;
+    flex-flow: column nowrap;
+
+    a {
+      border: none;
+      background: none;
+      outline: none;
+      position: relative;
+      width: 3.5rem;
+      margin: 0.8rem;
+
+      &:hover {
+        border: none;
+      }
+
+      & > svg {
+        & > path {
+          stroke: $base-color;
+        }
+        &:hover > path {
+          stroke: $tertiary-color;
+        }
+      }
+    }
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    margin-right: 1.5em;
+    background: linear-gradient(
+      to right,
+      $secondary-color 58.78%,
+      $tertiary-color 58.78%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .home__page-explore {
+    font-size: 1.5rem;
+    margin-top: -16rem;
+  }
+
+  .home__head-arrow {
+    width: 1rem;
+  }
+}
+
+@media (max-width: 814px) {
+  .home-module {
+    height: 100rem;
+  }
+
+  .home__icon-container {
+    display: none;
+  }
+
+  .home__title-container {
+    width: 80%;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 8.5vw;
+    background: linear-gradient(
+      to right,
+      $secondary-color 59.7%,
+      $tertiary-color 59.7%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .home__page-explore {
+    margin-top: -12rem;
+    font-size: 2rem;
+  }
+
+  .home__head-arrow {
+    width: 1.5rem;
   }
 }
 
@@ -103,13 +155,12 @@ h1 {
   }
 
   .home__title-container {
-    width: 90%;
-    margin: 0;
+    width: 100%;
+    margin: 14rem 3rem 0 1rem;
   }
 
   h1 {
-    margin: 15rem 0.5rem 0 0.5rem;
-    font-size: 8rem;
+    font-size: 12vw;
     background: none;
     background-clip: none;
     -webkit-background-clip: none;
@@ -127,8 +178,13 @@ h1 {
 }
 
 @media (max-width: 360px) {
+  .home__title-container {
+    margin-top: 15rem;
+    margin-right: 3rem;
+  }
+
   h1 {
-    font-size: 10rem;
+    font-size: 12vw;
   }
 
   .home__page-explore {
