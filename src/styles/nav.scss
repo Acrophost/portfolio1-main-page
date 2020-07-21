@@ -74,10 +74,51 @@ a {
 }
 
 @media (max-width: 480px) {
+  @-webkit-keyframes fadeIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45vw;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      width: 0;
+    }
+    to {
+      width: 45vw;
+    }
+  }
+
   .nav-module {
     background: none;
+    margin: 0;
+    padding: 0;
     ul {
       display: none;
+      background-color: scale-color(
+        $base-color,
+        $lightness: -40%,
+        $saturation: -40%
+      );
+      font-size: 4.5vw;
+      height: 110vh;
+      position: fixed;
+      right: 0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+      li {
+        padding: 3rem 10vw;
+        width: 100%;
+
+        &:active {
+          background-color: scale-color($base-color, $lightness: -20%);
+        }
+      }
     }
   }
 
@@ -128,27 +169,30 @@ a {
     border-radius: 10% 0 10% 50%;
     padding: 4rem 3rem 2.5rem 2.5rem;
     transition: 1s ease;
+  }
 
-    &:active {
-      height: 100vh;
-      border-radius: 0;
+  .opened {
+    height: 110vh;
+    border-radius: 0;
+    right: 45vw;
+    padding-right: 0;
+    padding-left: 1.5rem;
 
-      .nav__hamburger-t {
-        transform: rotate(30deg);
-        margin-top: 1rem;
-      }
+    .nav__hamburger-t {
+      transform: rotate(30deg);
+      margin-top: 1rem;
+    }
 
-      .nav__hamburger-m {
-        transform: rotate(90deg);
-        right: 4.8rem;
-        top: 6.05rem;
-      }
+    .nav__hamburger-m {
+      transform: rotate(90deg);
+      right: 1.8rem;
+      top: 6.05rem;
+    }
 
-      .nav__hamburger-b {
-        transform: rotate(-30deg);
-        right: 2.9rem;
-        top: 7.2rem;
-      }
+    .nav__hamburger-b {
+      transform: rotate(-30deg);
+      right: 0;
+      top: 7.2rem;
     }
   }
 

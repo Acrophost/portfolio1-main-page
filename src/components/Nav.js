@@ -3,6 +3,7 @@ import { ReactComponent as PersonalLogo } from "../images/logo.svg";
 
 const Nav = (props) => {
   const [headClass, setHeadClass] = useState("nav-module");
+  const [buttonOpen, setButtonOpen] = useState("nav__menu-button");
 
   const checkDetachment = () => {
     setHeadClass(
@@ -17,6 +18,18 @@ const Nav = (props) => {
       window.addEventListener("scroll", checkDetachment);
     };
   }, []);
+
+  const toggleMenu = () => {
+    const uls = document.getElementsByTagName("ul")[0];
+    uls.style.display =
+      uls.style.display == "none" || uls.style.display == "" ? "block" : "none";
+
+    setButtonOpen(
+      buttonOpen == "nav__menu-button"
+        ? "nav__menu-button opened"
+        : "nav__menu-button"
+    );
+  };
 
   return (
     <header className={headClass}>
@@ -83,7 +96,7 @@ const Nav = (props) => {
           </li>
         </a>
       </ul>
-      <button className="nav__menu-button">
+      <button className={buttonOpen} onClick={toggleMenu}>
         <div className="nav__hamburger-t"></div>
         <div className="nav__hamburger-m"></div>
         <div className="nav__hamburger-b"></div>
