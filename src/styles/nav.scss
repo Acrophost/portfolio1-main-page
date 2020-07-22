@@ -2,7 +2,7 @@
 
 .nav-module {
   display: grid;
-  grid-template-columns: 1fr 4fr 5fr;
+  grid-template-columns: 1fr 4fr 50vw;
   font-family: $fancy-font;
   font-size: 1.2rem;
   letter-spacing: 0.25rem;
@@ -25,13 +25,6 @@
 
 .nav__menu-button {
   display: none;
-}
-
-.detached {
-  background-color: $secondary-color;
-  -webkit-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
-  -moz-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
-  box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
 }
 
 .nav__logo {
@@ -73,7 +66,16 @@ a {
   color: $base-color;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 1050px) {
+  .detached {
+    background-color: $secondary-color;
+    -webkit-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+    -moz-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+    box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
+  }
+}
+
+@media (max-width: 1049px) {
   @-webkit-keyframes fadeIn {
     from {
       width: 0;
@@ -105,18 +107,24 @@ a {
       font-size: 4.5vw;
       height: 110vh;
       position: fixed;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      justify-content: flex-start;
       right: 0;
       margin: 0;
       padding: 0;
       text-align: center;
       -webkit-animation: fadeIn 1s;
       animation: fadeIn 1s;
-      li {
-        padding: 3rem 10vw;
+      a {
         width: 100%;
 
         &:active {
           background-color: scale-color($base-color, $lightness: -20%);
+        }
+
+        li {
+          padding: 4rem 10vw;
         }
       }
     }

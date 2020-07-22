@@ -22,7 +22,7 @@ const Nav = (props) => {
   const toggleMenu = () => {
     const uls = document.getElementsByTagName("ul")[0];
     uls.style.display =
-      uls.style.display == "none" || uls.style.display == "" ? "block" : "none";
+      uls.style.display == "none" || uls.style.display == "" ? "flex" : "none";
 
     setButtonOpen(
       buttonOpen == "nav__menu-button"
