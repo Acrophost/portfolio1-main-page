@@ -10,6 +10,14 @@ import Contact from "./Contact";
 
 const projects = [
   {
+    name: "XYZ",
+    description: (
+      <div>
+        <p>This is placeholder for description.</p>{" "}
+        <p>There will be an actual one once I will make some.</p>{" "}
+        <p>Used technologies: ...</p>
+      </div>
+    ),
     src: "xyz",
     alt: "xyz",
     srcMobile: "xyz",
@@ -18,6 +26,14 @@ const projects = [
     liveUrl: "/#",
   },
   {
+    name: "ABC",
+    description: (
+      <div>
+        <p>This is placeholder for description.</p>{" "}
+        <p>There will be an actual one once I will make some.</p>{" "}
+        <p>Used technologies: ...</p>
+      </div>
+    ),
     src: "abc",
     alt: "abc",
     srcMobile: "abc",
@@ -26,10 +42,18 @@ const projects = [
     liveUrl: "/#",
   },
   {
-    src: "abc",
-    alt: "abc",
-    srcMobile: "abc",
-    altMobile: "mobile abc",
+    name: "ABCD",
+    description: (
+      <div>
+        <p>This is placeholder for description.</p>{" "}
+        <p>There will be an actual one once I will make some.</p>{" "}
+        <p>Used technologies: ...</p>
+      </div>
+    ),
+    src: "abcd",
+    alt: "abcd",
+    srcMobile: "abcd",
+    altMobile: "mobile abcd",
     codeUrl: "/#",
     liveUrl: "/#",
   },

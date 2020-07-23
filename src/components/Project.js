@@ -26,6 +26,8 @@ class Project extends React.Component {
       this.state.current + 1 > this.props.projects.length - 1
         ? 0
         : this.state.current++;
+
+    console.log(this.state.current);
   }
 
   handleLeftClick() {
@@ -33,6 +35,8 @@ class Project extends React.Component {
       this.state.current - 1 < 0
         ? this.props.projects.length - 1
         : this.state.current--;
+
+    console.log(this.state.current);
   }
 
   handleCheckCode() {
@@ -47,6 +51,8 @@ class Project extends React.Component {
     const i = this.state.current;
 
     const project = {
+      name: this.props.projects[i].name,
+      description: this.props.projects[i].description,
       src: this.props.projects[i].src,
       srcMobile: this.props.projects[i].srcMobile,
       alt: this.props.projects[i].alt,
@@ -55,27 +61,49 @@ class Project extends React.Component {
 
     return (
       <ProjectElement ref={this.props.refs.projects}>
-        <div className="triangle-a"></div>
+        <div className="project__triangle-a"></div>
         <h2>Projects</h2>
-        <button className="arrow-left" onClick={this.handleLeftClick}>
-          <ArrowSmall className="arrow-l" />
+        <div className="project__swap-info">
+          <span className="project__info-arrow-l">{"<"}</span> Swap to sides to
+          see other projects!{" "}
+          <span className="project__info-arrow-l">{">"}</span>
+        </div>
+        <button className="project__arrow-left" onClick={this.handleLeftClick}>
+          <ArrowSmall className="project__arrow-l" />
         </button>
-        <div className="images-container">
-          <img src={project.src} alt={project.alt} className="desktop-img" />
+        <div className="project__images-container">
+          <img
+            src={project.src}
+            alt={project.alt}
+            className="project__desktop-img"
+          />
           <img
             src={project.srcMobile}
             alt={project.altMobile}
-            className="mobile-img"
+            className="project__mobile-img"
           />
         </div>
-        <button className="arrow-right" onClick={this.handleRightClick}>
-          <ArrowSmall className="arrow-r" />
+        <button
+          className="project__arrow-right"
+          onClick={this.handleRightClick}
+        >
+          <ArrowSmall className="project__arrow-r" />
         </button>
-        <div className="button-container">
-          <button className="view-button" onClick={this.handleCheckLive}>
+        <div className="project__description-container">
+          <h3>{project.name}</h3>
+          {project.description}
+        </div>
+        <div className="project__button-container">
+          <button
+            className="project__view-button"
+            onClick={this.handleCheckLive}
+          >
             Live version
           </button>
-          <button className="view-button" onClick={this.handleCheckCode}>
+          <button
+            className="project__view-button"
+            onClick={this.handleCheckCode}
+          >
             Code
           </button>
         </div>
