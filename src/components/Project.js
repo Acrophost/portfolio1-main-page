@@ -10,7 +10,7 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      current: 0,
+      active: 0,
     };
 
     this.props.refs.projects = React.createRef();
@@ -22,42 +22,33 @@ class Project extends React.Component {
   }
 
   handleRightClick() {
-    this.setState.current =
-      this.state.current + 1 > this.props.projects.length - 1
-        ? 0
-        : this.state.current++;
-
-    console.log(this.state.current);
+    this.setState({
+      active:
+        this.state.active + 1 > this.props.projects.length - 1
+          ? 0
+          : this.state.active + 1,
+    });
   }
 
   handleLeftClick() {
-    this.setState.current =
-      this.state.current - 1 < 0
-        ? this.props.projects.length - 1
-        : this.state.current--;
-
-    console.log(this.state.current);
+    this.setState({
+      active:
+        this.state.active - 1 < 0
+          ? this.props.projects.length - 1
+          : this.state.active - 1,
+    });
   }
 
   handleCheckCode() {
-    navigate(this.props.projects[this.state.current].codeUrl);
+    navigate(this.state.project.codeUrl);
   }
 
   handleCheckLive() {
-    navigate(this.props.projects[this.state.current].liveUrl);
+    navigate(this.state.liveUrl);
   }
 
   render() {
-    const i = this.state.current;
-
-    const project = {
-      name: this.props.projects[i].name,
-      description: this.props.projects[i].description,
-      src: this.props.projects[i].src,
-      srcMobile: this.props.projects[i].srcMobile,
-      alt: this.props.projects[i].alt,
-      altMobile: this.props.projects[i].altMobile,
-    };
+    const project = this.props.projects[this.state.active];
 
     return (
       <ProjectElement ref={this.props.refs.projects}>
