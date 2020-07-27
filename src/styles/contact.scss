@@ -36,3 +36,13 @@
     }
   }
 }
+
+@media (max-width: 480px) {
+  .contact__content {
+    font-size: 3.5rem;
+  }
+
+  .contact__icon-container a {
+    width: 10rem;
+  }
+}

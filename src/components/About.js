@@ -10,22 +10,22 @@ const About = (props) => {
   return (
     <AboutElement ref={props.refs.about}>
       <h2>About</h2>
-      <div className="about-img">
+      <div className="about__img-container">
         <img
           src="../../src/images/mahface.jpg"
           alt="Anna's face"
-          className="its-me"
+          className="about__my-img"
         />
       </div>
-      <div className="about-content">
-        <div className="about-info">
+      <div className="about__content">
+        <div className="about__info">
           <p>I'm a 24 year old junior developer from Warsaw, Poland.</p>
           <p>Always happy to learn new things and challenge myself.</p>
           <p>
             If you have any interesting projects or opportunities, please let me
             know! :)
           </p>
-          <div className="about-technology">
+          <div className="about__technology">
             <p>I work with the use of:</p>
             <ul>
               <li>HTML</li>

@@ -12,14 +12,14 @@
   }
 }
 
-.about-content {
+.about__content {
   display: flex;
   position: relative;
   margin-left: 40rem;
   font-size: 1.5rem;
 }
 
-.about-img {
+.about__img-container {
   position: absolute;
   top: 5rem;
   height: 45rem;
@@ -28,8 +28,29 @@
   overflow: hidden;
 }
 
-.its-me {
+.about__my-img {
   width: 70rem;
   margin-left: -25rem;
   margin-top: -3rem;
+}
+
+@media (max-width: 1049px) {
+  .about__img-container {
+    display: none;
+  }
+
+  .about__content {
+    margin: 5rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__content {
+    font-size: 3.5rem;
+  }
+
+  .about-module {
+    padding-top: 15rem;
+  }
 }

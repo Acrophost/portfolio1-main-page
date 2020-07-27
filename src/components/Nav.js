@@ -21,8 +21,13 @@ const Nav = (props) => {
 
   const toggleMenu = () => {
     const uls = document.getElementsByTagName("ul")[0];
+    const overlay = document.getElementsByClassName("nav__overlay")[0];
     uls.style.display =
       uls.style.display == "none" || uls.style.display == "" ? "flex" : "none";
+    overlay.style.display =
+      overlay.style.display == "none" || overlay.style.display == ""
+        ? "block"
+        : "none";
 
     setButtonOpen(
       buttonOpen == "nav__menu-button"
@@ -38,6 +43,7 @@ const Nav = (props) => {
         <PersonalLogo className="nav__logo" />
         PIASECKA
       </div>
+      <div className="nav__overlay"></div>
       <ul>
         <a
           href="/#home"

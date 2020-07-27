@@ -99,11 +99,6 @@ a {
     padding: 0;
     ul {
       display: none;
-      background-color: scale-color(
-        $base-color,
-        $lightness: -40%,
-        $saturation: -40%
-      );
       font-size: 4.5vw;
       height: 110vh;
       position: fixed;
@@ -130,6 +125,18 @@ a {
     }
   }
 
+  .nav__overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: scale-color(
+      $base-color,
+      $lightness: -40%,
+      $saturation: -40%
+    );
+  }
+
   .detached {
     & > .nav__logo-module {
       display: none;
@@ -144,8 +151,6 @@ a {
     content: "";
     background-color: $tertiary-color;
     border-radius: 3rem;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
     transition: 1s ease;
   }
 
@@ -155,11 +160,11 @@ a {
   }
 
   .nav__hamburger-m {
-    top: 5.5rem;
+    top: 3.5rem;
   }
 
   .nav__hamburger-b {
-    top: 7rem;
+    top: 5rem;
   }
 
   .nav__menu-button {
@@ -169,38 +174,44 @@ a {
     flex-flow: column nowrap;
     background-color: $secondary-color;
     position: fixed;
-    top: -3rem;
-    right: -3rem;
-    height: 10rem;
+    top: 2rem;
+    right: 2rem;
+    height: 7.5rem;
     border: none;
     outline: none;
-    border-radius: 10% 0 10% 50%;
-    padding: 4rem 3rem 2.5rem 2.5rem;
+    background-color: scale-color(
+      $tertiary-color,
+      $saturation: -40%,
+      $lightness: 40%,
+      $alpha: -20%
+    );
+    padding: 2rem 2rem;
     transition: 1s ease;
   }
 
   .opened {
-    height: 110vh;
-    border-radius: 0;
-    right: 45vw;
-    padding-right: 0;
-    padding-left: 1.5rem;
+    background-color: scale-color(
+      $tertiary-color,
+      $saturation: -40%,
+      $lightness: 30%,
+      $alpha: -20%
+    );
 
     .nav__hamburger-t {
       transform: rotate(30deg);
-      margin-top: 1rem;
+      margin-top: 0.5rem;
     }
 
     .nav__hamburger-m {
       transform: rotate(90deg);
-      right: 1.8rem;
-      top: 6.05rem;
+      right: 3.8rem;
+      top: 3.7rem;
     }
 
     .nav__hamburger-b {
       transform: rotate(-30deg);
-      right: 0;
-      top: 7.2rem;
+      right: 2rem;
+      top: 4.7rem;
     }
   }
 

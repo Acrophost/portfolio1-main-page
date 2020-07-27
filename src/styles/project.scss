@@ -200,3 +200,13 @@
     padding-bottom: 35vh;
   }
 }
+
+@media (max-width: 480px) {
+  .project__swap-info {
+    font-size: 3rem;
+  }
+
+  .project__description-container {
+    font-size: 3.5rem;
+  }
+}
