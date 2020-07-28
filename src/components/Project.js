@@ -94,11 +94,10 @@ class Project extends React.Component {
             alt={project.alt}
             className="project__desktop-img"
           />
-          <img
-            src={project.srcMobile}
-            alt={project.altMobile}
-            className="project__mobile-img"
-          />
+          <div className="project__description-container">
+            <h3>{project.name}</h3>
+            {project.description}
+          </div>
         </div>
         <button
           className="project__arrow-right"
@@ -106,10 +105,7 @@ class Project extends React.Component {
         >
           <ArrowSmall className="project__arrow-r" />
         </button>
-        <div className="project__description-container">
-          <h3>{project.name}</h3>
-          {project.description}
-        </div>
+
         <div className="project__button-container">
           <button
             className="project__view-button"
