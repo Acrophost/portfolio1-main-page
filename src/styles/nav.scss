@@ -42,14 +42,15 @@ a {
 
   li {
     list-style-type: none;
-    padding: 0 0.5rem;
+    padding: 0 0.1rem;
     margin: 0;
     transition: border 2s;
     color: $tertiary-color;
     text-decoration: none;
+    transition: color 0.5s ease-in-out;
 
     &:hover {
-      border-bottom: 2px solid;
+      color: scale-color($tertiary-color, $lightness: 50%);
     }
   }
 }
@@ -64,6 +65,7 @@ a {
 
 .nav__active {
   color: $base-color;
+  transition: color 1s;
 }
 
 @media (min-width: 1050px) {
@@ -116,6 +118,43 @@ a {
     }
   }
 
+  @keyframes slide-up {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes slide-up {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-down {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+  }
+
+  @-webkit-keyframes slide-down {
+    0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(10rem);
+      opacity: 0;
+    }
+  }
+
   .nav-module {
     background: none;
     margin: 0;
@@ -132,16 +171,22 @@ a {
 
       a {
         width: 100%;
-
-        &:active {
-          background-color: scale-color($base-color, $lightness: -20%);
-        }
+        overflow: hidden;
 
         li {
           padding: 4rem 7vw;
+          transform: translateY(10rem);
+          opacity: 0;
+          -webkit-animation: slide-up 1s ease-in forwards 0.5s;
+          animation: slide-up 1s ease-in forwards 0.5s;
         }
       }
     }
+  }
+
+  .nav-module ul a li.slide-down {
+    -webkit-animation: slide-down 0.5s ease-in;
+    animation: slide-down 0.5s ease-in;
   }
 
   .nav__overlay {
@@ -152,7 +197,12 @@ a {
     background-color: $secondary-color;
     -webkit-animation: grow 1s ease-in;
     animation: grow 1s ease-in;
-    transform-origin: 95% 3%;
+    transform-origin: 96% 2%;
+  }
+
+  .shrink {
+    -webkit-animation: shrink 1s ease-in;
+    animation: shrink 1s ease-in;
   }
 
   .detached {

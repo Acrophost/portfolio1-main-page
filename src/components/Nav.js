@@ -10,6 +10,7 @@ class Nav extends React.Component {
       buttonClass: "nav__menu-button",
     };
 
+    this.checkLocation = this.checkLocation.bind(this);
     this.checkDetachment = this.checkDetachment.bind(this);
     this.toggleMenu = this.toggleMenu.bind(this);
     this.showUlsOnBiggerScreens = this.showUlsOnBiggerScreens.bind(this);
@@ -17,7 +18,7 @@ class Nav extends React.Component {
 
   componentDidMount() {
     window.onscroll = () => {
-      window.addEventListener("scroll", this.checkDetachment);
+      window.addEventListener("scroll", this.checkLocation);
     };
     window.addEventListener("resize", this.showUlsOnBiggerScreens);
   }
@@ -37,10 +38,38 @@ class Nav extends React.Component {
     }
   }
 
+  checkLocation() {
+    this.checkDetachment();
+    console.log(window.pageYOffset);
+    console.log({
+      home: this.props.refs.home.current.offsetTop,
+      projects: this.props.refs.projects.current.offsetTop,
+      about: this.props.refs.about.current.offsetTop,
+      contact: this.props.refs.contact.current.offsetTop,
+    });
+    if (window.pageYOffset < this.props.refs.projects.current.offsetTop - 300) {
+      this.props.setLocation("/");
+    } else if (
+      window.pageYOffset <
+      this.props.refs.about.current.offsetTop - 300
+    ) {
+      this.props.setLocation("projects");
+    } else if (
+      window.pageYOffset <
+      this.props.refs.contact.current.offsetTop - 400
+    ) {
+      this.props.setLocation("about");
+    } else {
+      this.props.setLocation("contact");
+    }
+
+    console.log(this.props.location);
+  }
+
   checkDetachment() {
     this.setState({
       headClass:
-        window.pageYOffset > props.refs.projects.current.offsetTop - 100
+        window.pageYOffset > this.props.refs.projects.current.offsetTop - 100
           ? "nav-module detached"
           : "nav-module",
     });
@@ -48,14 +77,27 @@ class Nav extends React.Component {
 
   toggleMenu() {
     const uls = document.getElementsByTagName("ul")[0];
+    const lis = uls.getElementsByTagName("li");
     const overlay = document.getElementsByClassName("nav__overlay")[0];
 
     if (overlay.style.display == "none" || overlay.style.display == "") {
       uls.style.display = "flex";
       overlay.style.display = "block";
     } else {
-      uls.style.display = "none";
-      overlay.style.display = "none";
+      for (let i = 0; i < lis.length; i++) {
+        lis[i].classList.add("slide-down");
+      }
+      window.setTimeout(() => {
+        overlay.classList.add("shrink");
+        window.setTimeout(() => {
+          uls.style.display = "none";
+          overlay.style.display = "none";
+          for (let i = 0; i < lis.length; i++) {
+            lis[i].classList.remove("slide-down");
+          }
+          overlay.classList.remove("shrink");
+        }, 1000);
+      }, 550);
     }
 
     this.setState({
@@ -82,6 +124,7 @@ class Nav extends React.Component {
               this.props.setLocation("/");
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               this.props.refs.home.current.focus();
+              this.toggleMenu();
             }}
           >
             <li className={this.props.location == "/" ? "nav__active" : ""}>
@@ -97,6 +140,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.projects.current.focus();
+              this.toggleMenu();
             }}
           >
             <li
@@ -114,6 +158,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.about.current.focus();
+              this.toggleMenu();
             }}
           >
             <li className={this.props.location == "about" ? "nav__active" : ""}>
@@ -129,6 +174,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.contact.current.focus();
+              this.toggleMenu();
             }}
           >
             <li
