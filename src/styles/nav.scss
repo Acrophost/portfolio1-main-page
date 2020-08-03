@@ -84,8 +84,8 @@ a {
   .nav__logo-module {
     transform: translateY(3rem);
     opacity: 0;
-    -webkit-animation: slide-up 1s ease-in forwards 0.5s;
-    animation: slide-up 1s ease-in forwards 0.5s;
+    -webkit-animation: slide-up 1s ease-in forwards;
+    animation: slide-up 1s ease-in forwards;
   }
 }
 
