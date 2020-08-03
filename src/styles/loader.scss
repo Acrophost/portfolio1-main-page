@@ -1,0 +1,10 @@
+@import "./variables";
+
+.loader-module {
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    $secondary-color 50%,
+    hsla(0, 0, 0, 0) 50%
+  );
+}

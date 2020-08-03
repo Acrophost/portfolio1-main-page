@@ -124,7 +124,7 @@ class Nav extends React.Component {
               this.props.setLocation("/");
               window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
               this.props.refs.home.current.focus();
-              this.toggleMenu();
+              window.setTimeout(this.toggleMenu, 500);
             }}
           >
             <li className={this.props.location == "/" ? "nav__active" : ""}>
@@ -140,7 +140,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.projects.current.focus();
-              this.toggleMenu();
+              window.setTimeout(this.toggleMenu, 500);
             }}
           >
             <li
@@ -158,7 +158,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.about.current.focus();
-              this.toggleMenu();
+              window.setTimeout(this.toggleMenu, 500);
             }}
           >
             <li className={this.props.location == "about" ? "nav__active" : ""}>
@@ -174,7 +174,7 @@ class Nav extends React.Component {
                 block: "nearest",
               });
               this.props.refs.contact.current.focus();
-              this.toggleMenu();
+              window.setTimeout(this.toggleMenu, 500);
             }}
           >
             <li

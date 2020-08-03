@@ -69,92 +69,27 @@ a {
 }
 
 @media (min-width: 1050px) {
+  .nav-module {
+    overflow: hidden;
+  }
+
   .detached {
     background-color: $secondary-color;
     -webkit-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
     -moz-box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
     box-shadow: -1px 22px 44px 1px rgba(0, 0, 0, 0.41);
   }
+
+  .nav-module ul li,
+  .nav__logo-module {
+    transform: translateY(3rem);
+    opacity: 0;
+    -webkit-animation: slide-up 1s ease-in forwards 0.5s;
+    animation: slide-up 1s ease-in forwards 0.5s;
+  }
 }
 
 @media (max-width: 1049px) {
-  @keyframes grow {
-    from {
-      transform: scale(0);
-    }
-
-    to {
-      transform: scale(1);
-    }
-  }
-
-  @-webkit-keyframes grow {
-    from {
-      transform: scale(0);
-    }
-
-    to {
-      transform: scale(1);
-    }
-  }
-
-  @keyframes shrink {
-    from {
-      transform: scale(1);
-    }
-
-    to {
-      transform: scale(0);
-    }
-  }
-
-  @-webkit-keyframes shrink {
-    from {
-      transform: scale(1);
-    }
-
-    to {
-      transform: scale(0);
-    }
-  }
-
-  @keyframes slide-up {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes slide-up {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-  }
-
-  @keyframes slide-down {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translateY(10rem);
-      opacity: 0;
-    }
-  }
-
-  @-webkit-keyframes slide-down {
-    0% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(10rem);
-      opacity: 0;
-    }
-  }
-
   .nav-module {
     background: none;
     margin: 0;

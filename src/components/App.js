@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 
 import "../styles/style.scss";
@@ -57,8 +57,19 @@ const refs = [];
 
 const App = () => {
   const [location, setLocation] = useState("/");
+  const [isLoading, setLoading] = useState(true);
 
-  return (
+  useEffect(() => {
+    window.setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  return isLoading ? (
+    <div class="loader-module">
+      <img class="loader-svg" src="../src/images/loader.svg" />
+    </div>
+  ) : (
     <div>
       <Nav location={location} setLocation={setLocation} refs={refs} />
       <Home refs={refs} />
