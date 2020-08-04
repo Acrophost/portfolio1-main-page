@@ -13,13 +13,13 @@
 .project__images-container {
   position: relative;
   display: flex;
-  width: 85%;
+  width: 100%;
   justify-content: stretch;
 }
 
 .project__desktop-img {
   position: relative;
-  width: 70%;
+  width: 85%;
   min-height: 32vw;
   background-color: $placeholder;
   margin-right: 5%;
@@ -37,7 +37,9 @@
   transition: linear color 0.4s;
 
   &:hover {
-    .project__arrow-r > path,
+    .project__arrow-r > path {
+      stroke: $secondary-color;
+    }
     .project__arrow-l > path {
       stroke: $tertiary-color;
     }
@@ -62,6 +64,54 @@
   }
 }
 
+.project__container {
+  width: 85%;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  width: 85%;
+  justify-content: stretch;
+}
+
+.prev {
+  left: -100vw;
+  opacity: 0;
+  display: none;
+}
+
+.next {
+  right: -100vw;
+  opacity: 0;
+  display: none;
+}
+
+.fade-left {
+  -webkit-animation: fade-left 1s ease-in forwards 0.5s;
+  animation: fade-left 1s ease-in forwards 0.5s;
+}
+
+.fade-right {
+  -webkit-animation: fade-right 1s ease-in forwards 0.5s;
+  animation: fade-right 1s ease-in forwards 0.5s;
+}
+
+.appear-left {
+  display: flex;
+  -webkit-animation: appear-left 1s ease-in forwards 0.5s;
+  animation: appear-left 1s ease-in forwards 0.5s;
+}
+
+.appear-right {
+  display: flex;
+  -webkit-animation: appear-right 1s ease-in forwards 0.5s;
+  animation: appear-right 1s ease-in forwards 0.5s;
+}
+
 .project__description-container {
   font-size: 2.5rem;
   width: 30%;
@@ -82,8 +132,8 @@
 .project__view-button {
   flex: 30%;
   border-radius: 10px;
-  border: $tertiary-color solid;
-  color: $tertiary-color;
+  border: $secondary-color solid;
+  color: $secondary-color;
   background-color: inherit;
   margin: 3rem 3rem 0.85rem 3rem;
   font-size: 2.5rem;
@@ -91,8 +141,8 @@
   transition: background-color 0.5s, color 0.6s;
 
   &:hover {
-    background-color: $tertiary-color;
-    color: rgba(255, 255, 255, 0.5);
+    background-color: $secondary-color;
+    color: scale-color($secondary-color, $lightness: 70%);
   }
 }
 
@@ -102,13 +152,14 @@
   right: 0;
   width: 70vw;
   height: 60vw;
-  background-color: $secondary-color;
+  background-color: $tertiary-color;
   clip-path: polygon(49% 68%, 100% 100%, 100% 0);
   content: "";
 }
 
 .project__swap-info {
   display: none;
+  z-index: 5;
 }
 
 @media (min-width: 2000px) {
@@ -146,12 +197,8 @@
   }
 
   .project__triangle-a {
-    position: absolute;
-    top: 2vw;
-    right: 0;
     width: 85vw;
     height: 60vh;
-    background-color: $secondary-color;
     clip-path: polygon(49% 68%, 100% 100%, 100% 0);
     content: "";
   }
