@@ -73,9 +73,9 @@ const App = () => {
     <div>
       <Nav location={location} setLocation={setLocation} refs={refs} />
       <Home refs={refs} />
-      <Project projects={projects} refs={refs} />
-      <About refs={refs} />
-      <Contact refs={refs} />
+      <Project projects={projects} refs={refs} location={location} />
+      <About refs={refs} location={location} />
+      <Contact refs={refs} location={location} />
     </div>
   );
 };

@@ -8,6 +8,8 @@
   align-items: center;
   justify-content: center;
   padding-top: 1.2rem;
+  opacity: 0;
+  transition: opacity 0.5s;
 }
 
 .project__images-container {
@@ -91,25 +93,25 @@
 }
 
 .fade-left {
-  -webkit-animation: fade-left 1s ease-in forwards 0.5s;
-  animation: fade-left 1s ease-in forwards 0.5s;
+  -webkit-animation: fade-left 1s ease-in forwards;
+  animation: fade-left 1s ease-in forwards;
 }
 
 .fade-right {
-  -webkit-animation: fade-right 1s ease-in forwards 0.5s;
-  animation: fade-right 1s ease-in forwards 0.5s;
+  -webkit-animation: fade-right 1s ease-in forwards;
+  animation: fade-right 1s ease-in forwards;
 }
 
 .appear-left {
   display: flex;
-  -webkit-animation: appear-left 1s ease-in forwards 0.5s;
-  animation: appear-left 1s ease-in forwards 0.5s;
+  -webkit-animation: appear-left 1s ease-in forwards;
+  animation: appear-left 1s ease-in forwards;
 }
 
 .appear-right {
   display: flex;
-  -webkit-animation: appear-right 1s ease-in forwards 0.5s;
-  animation: appear-right 1s ease-in forwards 0.5s;
+  -webkit-animation: appear-right 1s ease-in forwards;
+  animation: appear-right 1s ease-in forwards;
 }
 
 .project__description-container {
@@ -160,6 +162,18 @@
 .project__swap-info {
   display: none;
   z-index: 5;
+}
+
+.project__info-arrow-l {
+  display: inline-block;
+  -webkit-animation: move-to-left 1.5s ease-in infinite;
+  animation: move-to-left 1.5s ease-in infinite;
+}
+
+.project__info-arrow-r {
+  display: inline-block;
+  -webkit-animation: move-to-right 1.5s ease-in infinite;
+  animation: move-to-right 1.5s ease-in infinite;
 }
 
 @media (min-width: 2000px) {

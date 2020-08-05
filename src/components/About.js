@@ -1,14 +1,19 @@
 import React from "react";
 
 const AboutElement = React.forwardRef((props, ref) => (
-  <div className="about-module" ref={ref} {...props}></div>
+  <div ref={ref} {...props}></div>
 ));
 
 const About = (props) => {
   props.refs.about = React.createRef();
 
   return (
-    <AboutElement ref={props.refs.about}>
+    <AboutElement
+      ref={props.refs.about}
+      className={
+        props.location == "about" ? "about-module active" : "about-module"
+      }
+    >
       <h2>About</h2>
       <div className="about__img-container">
         <img

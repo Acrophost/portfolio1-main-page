@@ -6,6 +6,8 @@
   background-color: $secondary-color;
   clip-path: polygon(0 0%, 100% 12%, 100% 94%, 0 100%);
   width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
 
   p {
     position: relative;
@@ -26,12 +28,19 @@
   width: 45rem;
   clip-path: polygon(0 0, 0% 100%, 70% 51%);
   overflow: hidden;
+  transform: translateX(-5vw);
+  opacity: 0;
 }
 
 .about__my-img {
   width: 70rem;
   margin-left: -25rem;
   margin-top: -3rem;
+}
+
+.active .about__img-container {
+  -webkit-animation: go-right 1s ease-in forwards;
+  animation: go-right 1s ease-in forwards;
 }
 
 @media (max-width: 1049px) {

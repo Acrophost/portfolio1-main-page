@@ -72,3 +72,52 @@ h2 {
 @import "./project";
 @import "./about";
 @import "./contact";
+
+.active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.active {
+  h2,
+  h3,
+  p,
+  .project__view-button,
+  .about__technology ul li,
+  .about__technology ul,
+  .contact__icon-container a {
+    transform: translateY(2rem);
+    opacity: 0;
+    -webkit-animation: slide-up 1s ease-in forwards;
+    animation: slide-up 1s ease-in forwards;
+  }
+
+  h3,
+  .about__technology ul {
+    animation-delay: 0.4s;
+  }
+
+  p {
+    animation-delay: 0.6s;
+  }
+
+  .project__view-button:nth-of-type(1) {
+    animation-delay: 0.6s;
+  }
+
+  .project__view-button:nth-of-type(2) {
+    animation-delay: 0.8s;
+  }
+
+  @for $i from 1 through 9 {
+    .about__technology ul li:nth-child(#{$i}) {
+      animation-delay: calc(0.5s + #{$i} * 0.1s);
+    }
+  }
+
+  @for $i from 1 through 3 {
+    .contact__icon-container a:nth-child(#{$i}) {
+      animation-delay: calc(0.2s + #{$i} * 0.3s);
+    }
+  }
+}

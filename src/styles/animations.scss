@@ -166,3 +166,61 @@
     opacity: 1;
   }
 }
+
+@keyframes move-to-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+}
+
+@-webkit-keyframes move-to-right {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(1rem);
+  }
+}
+
+@keyframes move-to-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-1rem);
+  }
+}
+
+@-webkit-keyframes move-to-left {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-1rem);
+  }
+}
+
+@keyframes go-right {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes go-right {
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -4,14 +4,19 @@ import { ReactComponent as GitLogo } from "../images/gitlogo.svg";
 import { ReactComponent as LinkedInLogo } from "../images/linlogo.svg";
 
 const ContactElement = React.forwardRef((props, ref) => (
-  <div className="contact-module" ref={ref} {...props}></div>
+  <div ref={ref} {...props}></div>
 ));
 
 const Contact = (props) => {
   props.refs.contact = React.createRef();
 
   return (
-    <ContactElement ref={props.refs.contact}>
+    <ContactElement
+      ref={props.refs.contact}
+      className={
+        props.location == "contact" ? "contact-module active" : "contact-module"
+      }
+    >
       <h2>Contact</h2>
       <div className="contact__content">
         <p>

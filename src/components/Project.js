@@ -3,7 +3,7 @@ import { navigate } from "@reach/router";
 import { ReactComponent as ArrowSmall } from "../images/arrow2.svg";
 
 const ProjectElement = React.forwardRef((props, ref) => (
-  <div className="project-module" ref={ref} {...props}></div>
+  <div ref={ref} {...props}></div>
 ));
 
 class Project extends React.Component {
@@ -137,6 +137,11 @@ class Project extends React.Component {
     console.log(project.description);
     return (
       <ProjectElement
+        className={
+          this.props.location == "projects"
+            ? "project-module active"
+            : "project-module"
+        }
         ref={this.props.refs.projects}
         onTouchStart={this.handleSwipeStart}
         onTouchMove={this.handleSwipeMove}
@@ -144,9 +149,9 @@ class Project extends React.Component {
         <div className="project__triangle-a"></div>
         <h2>Projects</h2>
         <div className="project__swap-info">
-          <span className="project__info-arrow-l">{"<"}</span> Swap to sides to
-          see other projects!{" "}
-          <span className="project__info-arrow-l">{">"}</span>
+          <span className="project__info-arrow-l">{"<"}</span>Swap to sides to
+          see other projects!
+          <span className="project__info-arrow-r">{">"}</span>
         </div>
         <button className="project__arrow-left" onClick={this.handleLeftClick}>
           <ArrowSmall className="project__arrow-l" />
