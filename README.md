@@ -8,7 +8,7 @@ Currently replaced with second version, that can be found [here](https://github.
 
 ## General info
 A simple portfolio made to show my other projects.
-Live version: [here](*le link)
+Live version: [here](https://acrophost.github.io/portfolio1-main-page/)
 
 ## Technologies
 Project is created with:
