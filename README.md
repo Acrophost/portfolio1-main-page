@@ -24,7 +24,7 @@ To run this project, install it locally using npm:
 
 ```
 $ npm install
-$ npm start
+$ npm run dev
 ```
 
 In case something doesn't work, the project's packages might need updating - use ```npm run update:packages```.
