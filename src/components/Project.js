@@ -134,7 +134,6 @@ class Project extends React.Component {
         ? 0
         : this.state.active + 1
     ];
-    console.log(project.description);
     return (
       <ProjectElement
         className={

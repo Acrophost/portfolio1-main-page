@@ -40,13 +40,6 @@ class Nav extends React.Component {
 
   checkLocation() {
     this.checkDetachment();
-    console.log(window.pageYOffset);
-    console.log({
-      home: this.props.refs.home.current.offsetTop,
-      projects: this.props.refs.projects.current.offsetTop,
-      about: this.props.refs.about.current.offsetTop,
-      contact: this.props.refs.contact.current.offsetTop,
-    });
     if (window.pageYOffset < this.props.refs.projects.current.offsetTop - 300) {
       this.props.setLocation("/");
     } else if (
@@ -62,8 +55,6 @@ class Nav extends React.Component {
     } else {
       this.props.setLocation("contact");
     }
-
-    console.log(this.props.location);
   }
 
   checkDetachment() {
