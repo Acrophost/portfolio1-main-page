@@ -76,36 +76,38 @@ class Nav extends React.Component {
   }
 
   toggleMenu() {
-    const uls = document.getElementsByTagName("ul")[0];
-    const lis = uls.getElementsByTagName("li");
-    const overlay = document.getElementsByClassName("nav__overlay")[0];
+    if (screen.width < 1049) {
+      const uls = document.getElementsByTagName("ul")[0];
+      const lis = uls.getElementsByTagName("li");
+      const overlay = document.getElementsByClassName("nav__overlay")[0];
 
-    if (overlay.style.display == "none" || overlay.style.display == "") {
-      uls.style.display = "flex";
-      overlay.style.display = "block";
-    } else {
-      for (let i = 0; i < lis.length; i++) {
-        lis[i].classList.add("slide-down");
-      }
-      window.setTimeout(() => {
-        overlay.classList.add("shrink");
+      if (overlay.style.display == "none" || overlay.style.display == "") {
+        uls.style.display = "flex";
+        overlay.style.display = "block";
+      } else {
+        for (let i = 0; i < lis.length; i++) {
+          lis[i].classList.add("slide-down");
+        }
         window.setTimeout(() => {
-          uls.style.display = "none";
-          overlay.style.display = "none";
-          for (let i = 0; i < lis.length; i++) {
-            lis[i].classList.remove("slide-down");
-          }
-          overlay.classList.remove("shrink");
-        }, 1000);
-      }, 550);
-    }
+          overlay.classList.add("shrink");
+          window.setTimeout(() => {
+            uls.style.display = "none";
+            overlay.style.display = "none";
+            for (let i = 0; i < lis.length; i++) {
+              lis[i].classList.remove("slide-down");
+            }
+            overlay.classList.remove("shrink");
+          }, 1000);
+        }, 550);
+      }
 
-    this.setState({
-      buttonClass:
-        this.state.buttonClass == "nav__menu-button"
-          ? "nav__menu-button opened"
-          : "nav__menu-button",
-    });
+      this.setState({
+        buttonClass:
+          this.state.buttonClass == "nav__menu-button"
+            ? "nav__menu-button opened"
+            : "nav__menu-button",
+      });
+    }
   }
 
   render() {

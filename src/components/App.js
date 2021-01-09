@@ -60,9 +60,7 @@ const App = () => {
   const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    window.setTimeout(() => {
-      setLoading(false);
-    }, 2000);
+    setLoading(false);
   }, []);
 
   return isLoading ? (

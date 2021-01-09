@@ -6,7 +6,8 @@
   "scripts": {
     "prod": "webpack --env.mode production",
     "dev": "webpack-dev-server --env.mode development --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update:packages": "npm update --save-dev && npm update --save"
   },
   "keywords": [],
   "author": "",
@@ -27,13 +28,13 @@
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
     "url-loader": "^4.1.0",
-    "webpack": "^4.43.0",
+    "webpack": "^5.12.2",
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
     "material-design-icons": "^3.0.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "webpack-dev-server": "^3.11.0"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "webpack-dev-server": "^3.11.1"
   }
 }

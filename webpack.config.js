@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 
 module.exports = ({ mode }) => {
   return {
@@ -41,5 +40,8 @@ module.exports = ({ mode }) => {
         filename: "./index.html",
       }),
     ],
+    output: {
+      filename: 'bundle.js',
+    }
   };
 };
